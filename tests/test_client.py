@@ -1,15 +1,11 @@
 import pytest
 from unittest.mock import Mock, patch
 from haprapi.Client import Client
-from haprapi.Backend import Backend
 
 @pytest.fixture
 def mock_client():
     return Client('localhost', 9999)
 
-@pytest.fixture
-def mock_backend(mock_client):
-    return Backend(mock_client)
 
 @pytest.fixture
 def mock_response():

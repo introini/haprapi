@@ -1,16 +1,39 @@
 from dataclasses import dataclass
 from typing import List, Optional
+from enum import Enum
+
+class ServerOperationalState(Enum):
+    STOPPED = 0
+    STARTING = 1
+    RUNNING = 2
+
+class ServerAdminState(Enum):
+    READY = 0
+    MAINTENANCE = 1
+    DRAIN = 2
+    MAINT = 3
+    DRAIN_WAIT = 4
+    MAINT_WAIT = 5
 
 @dataclass
 class Server:
+    id: int
     name: str
     address: str
+    operational_state: ServerOperationalState
+    admin_state: ServerAdminState
+    user_weight: int
+    initial_weight: int
+    time_since_last_change: int
+    check_status: int
+    check_result: int
+    check_health: int
+    check_state: int
     port: int
-    used_cur: int
-    used_max: int
 
 @dataclass
 class Backend:
+    id: int
     name: str
     servers: List[Server]
 
