@@ -1,6 +1,6 @@
 # HAPrapi
 
-HAProxy is a Python library for interacting with HAProxy's runtime API. It provides a simple and intuitive interface to manage and monitor HAProxy instances programmatically.
+HAPrapi is a Python library for interacting with HAProxy's runtime API. It provides a simple and intuitive interface to manage and monitor HAProxy instances programmatically.
 
 ## Features
 
@@ -12,7 +12,7 @@ HAProxy is a Python library for interacting with HAProxy's runtime API. It provi
 
 ## Installation
 
-To install HAProxy, run the following command:
+To install HAPrapi, run the following command:
 
 ```bash
 pip install haprapi
@@ -20,7 +20,7 @@ pip install haprapi
 
 ## Usage
 
-Here's a basic example of how to use HAProxy:
+Here's a basic example of how to use HAPrapi:
 
 ```python
 from haprapi import Client
