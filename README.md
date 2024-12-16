@@ -20,26 +20,45 @@ pip install haprapi
 
 ## Usage
 
-Here's a basic example of how to use HAPrapi:
+Here are some basic examples of how to use HAPrapi:
 
+### Get HAProxy Host information
 ```python
 from haprapi import Client
 
 # Initialize the client
 client = Client('localhost', 9999)
 
-# Get HAProxy information
 info = client.get_info()
 print(info)
+```
+### Get statistics
+```python
+from haprapi import Client
 
-# Get statistics
+# Initialize the client
+client = Client('localhost', 9999)
+
 stats = client.get_stat()
 print(stats)
+```
+### Enable a server
+```python
+from haprapi import Client
 
-# Enable a server
+# Initialize the client
+client = Client('localhost', 9999)
+
 client.enable_server('backend_name', 'server_name')
+```
 
-# Disable a frontend
+### Disable a frontend
+```python
+from haprapi import Client
+
+# Initialize the client
+client = Client('localhost', 9999)
+
 client.disable_frontend('frontend_name')
 ```
 
